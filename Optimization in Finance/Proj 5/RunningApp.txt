@@ -1,0 +1,5 @@
+To run the App:
+1. In R, first install shiny using: install.packages("shiny") 
+2. download and unzip the App zip file. This will create a App and put files into it. 
+3. load the library: library("shiny") 
+4. Run the App in R, replacing ... with App directory (the folder address of the App) : runApp(...)
