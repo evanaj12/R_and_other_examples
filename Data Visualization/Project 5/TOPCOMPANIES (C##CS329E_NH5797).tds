@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<datasource formatted-name='oracle.42103.886853252312' inline='true' source-platform='win' version='8.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 8300.15.0219.2230                                -->
+  <connection authentication='RDBMS' class='oracle' port='1521' schema='C##CS329E_NH5797' server='129.152.144.84' service='orcl.usuniversi01134.oraclecloud.internal' username='C##cs329e_nh5797'>
+    <relation name='TOPCOMPANIES' table='[C##CS329E_NH5797].[TOPCOMPANIES]' type='table' />
+    <metadata-records>
+      <metadata-record class='column'>
+        <remote-name>COMPANYID</remote-name>
+        <remote-type>131</remote-type>
+        <local-name>[COMPANYID]</local-name>
+        <parent-name>[TOPCOMPANIES]</parent-name>
+        <remote-alias>COMPANYID</remote-alias>
+        <ordinal>2</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>20</precision>
+        <scale>0</scale>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_NUM&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>CITY</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[CITY]</local-name>
+        <parent-name>[TOPCOMPANIES]</parent-name>
+        <remote-alias>CITY</remote-alias>
+        <ordinal>3</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <scale>0</scale>
+        <width>100</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation charset='1' flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=873,charform=1}&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>STATE</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[STATE]</local-name>
+        <parent-name>[TOPCOMPANIES]</parent-name>
+        <remote-alias>STATE</remote-alias>
+        <ordinal>4</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <scale>0</scale>
+        <width>10</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation charset='1' flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=873,charform=1}&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>INDUSTRY</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[INDUSTRY]</local-name>
+        <parent-name>[TOPCOMPANIES]</parent-name>
+        <remote-alias>INDUSTRY</remote-alias>
+        <ordinal>5</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <scale>0</scale>
+        <width>100</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation charset='1' flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=873,charform=1}&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>REVENUE</remote-name>
+        <remote-type>131</remote-type>
+        <local-name>[REVENUE]</local-name>
+        <parent-name>[TOPCOMPANIES]</parent-name>
+        <remote-alias>REVENUE</remote-alias>
+        <ordinal>6</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>20</precision>
+        <scale>2</scale>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_NUM&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>GROWTH</remote-name>
+        <remote-type>131</remote-type>
+        <local-name>[GROWTH]</local-name>
+        <parent-name>[TOPCOMPANIES]</parent-name>
+        <remote-alias>GROWTH</remote-alias>
+        <ordinal>7</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>20</precision>
+        <scale>3</scale>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_NUM&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>PERCENTAGEGROWTH</remote-name>
+        <remote-type>131</remote-type>
+        <local-name>[PERCENTAGEGROWTH]</local-name>
+        <parent-name>[TOPCOMPANIES]</parent-name>
+        <remote-alias>PERCENTAGEGROWTH</remote-alias>
+        <ordinal>8</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>20</precision>
+        <scale>3</scale>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_NUM&quot;</attribute>
+        </attributes>
+      </metadata-record>
+    </metadata-records>
+  </connection>
+  <aliases enabled='yes' />
+  <column caption='City' datatype='string' name='[CITY]' role='dimension' semantic-role='[City].[Name]' type='nominal'>
+  </column>
+  <column caption='Companyid' datatype='string' datatype-customized='true' name='[COMPANYID]' role='dimension' type='nominal'>
+  </column>
+  <column caption='REVRANK' datatype='integer' name='[Calculation1]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='RANK(SUM([REVENUE]))' scope-isolation='false'>
+      <table-calc ordering-type='Rows' />
+    </calculation>
+  </column>
+  <column caption='Rank' datatype='integer' name='[Calculation_0900409213003110]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='RANK(AVG([REVENUE]))' scope-isolation='false'>
+      <table-calc ordering-type='Rows' />
+    </calculation>
+  </column>
+  <column caption='Growth' datatype='real' name='[GROWTH]' role='measure' type='quantitative'>
+  </column>
+  <column caption='Industry' datatype='string' name='[INDUSTRY]' role='dimension' type='nominal'>
+  </column>
+  <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+    <calculation class='tableau' formula='1' />
+  </column>
+  <column caption='Percentagegrowth' datatype='real' name='[PERCENTAGEGROWTH]' role='measure' type='quantitative'>
+  </column>
+  <column caption='Revenue' datatype='real' name='[REVENUE]' role='measure' type='quantitative'>
+  </column>
+  <column caption='State' datatype='string' name='[STATE]' role='dimension' type='nominal'>
+  </column>
+  <layout dim-ordering='alphabetic' dim-percentage='0.542345' measure-ordering='alphabetic' measure-percentage='0.40228' show-structure='true' />
+  <semantic-values>
+    <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+  </semantic-values>
+</datasource>
