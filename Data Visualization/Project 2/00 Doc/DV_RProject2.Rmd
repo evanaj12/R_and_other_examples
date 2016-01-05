@@ -1,0 +1,95 @@
+---
+title: "DV_RProject2"
+output: html_document
+---
+
+Natasha Halfin, Evan Johnston, Kaylyn Zvonek
+
+For this project, we used a dataset containing information on the top 5000 companies in the country, including their state, city, industry, revenue, and percentage of growth.
+
+```{r, echo=TRUE}
+library("ggplot2")
+library("gplots")
+library("bitops")
+library("knitr")
+#library("plyr")
+library("RCurl")
+library("reshape2")
+library("tidyr")
+library("dplyr")
+```
+
+```{r, eval = TRUE, echo=TRUE}
+source("../01 Data/data.R")
+source("../02 Data Wrangling/dataWrangling.R")
+```
+
+This is a dataframe of our entire dataset.
+
+```{r, eval =TRUE, echo=TRUE}
+data.frame(head(companyData))
+```
+This is a dataframe of a subset of our data displaying companies in Texas that are in the IT services industry.
+```{r, eval =TRUE, echo=TRUE}
+data.frame(head(subset1))
+```
+
+This is a dataframe of wrangled data that indicates the average revenue and growth across each industry.
+
+```{r, eval =TRUE, echo=TRUE}
+data.frame(head(industryGrowthData))
+```
+
+This is a wrangled dataframe displaying companies in Texas and California and their industries.
+
+```{r, eval =TRUE, echo=TRUE}
+data.frame(head(txCaCompanyData))
+```
+
+This wrangled dataframe shows the highest revenue and growth by state.
+```{r, eval =TRUE, echo=TRUE}
+data.frame(head(stateGrowth))
+```
+This wrangled dataframe indicates the lowest revenue and growth by city.
+```{r, eval =TRUE, echo=TRUE}
+data.frame(head(cityGrowth))
+```
+**Data Visualizations**
+
+```{r, eval = TRUE, echo=TRUE}
+source("../03 Visualizations/viz1.R")
+source("../03 Visualizations/viz2.R")
+source("../03 Visualizations/viz3.R")
+source("../03 Visualizations/viz4.R")
+```
+**Industry Revenues**
+
+This plot shows the average revenue for each industry. Because the revenues are so varied, they are split up into 6 groups of similar revenue values.
+
+```{r, echo=TRUE, warning=FALSE}
+plot(viz1)
+```
+
+**Industry Growth**
+
+This plot shows the average growth for each industry, ordered from least growth to most
+
+```{r, echo=TRUE, warning=FALSE}
+plot(viz2)
+```
+
+**Revenue and Growth by State**
+
+This plot shows the highest revenues and highest growth rates of each state as a percent of the maximum.
+
+```{r, echo=TRUE, warning=FALSE}
+plot(viz3)
+```
+
+**State Growth**
+
+This plot shows a comparison between number of companies in each industry for California and Texas
+
+```{r, echo=TRUE, warning=FALSE}
+plot(viz4)
+```

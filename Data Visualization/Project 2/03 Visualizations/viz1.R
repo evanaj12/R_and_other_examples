@@ -1,0 +1,1 @@
+viz1 <- industryGrowthData %>% mutate(revPerc=cume_dist(revMean), revClass=ntile(revPerc, 6)) %>% ggplot(aes(x=INDUSTRY, y=revMean, color=INDUSTRY, fill=INDUSTRY)) + geom_bar(stat="identity", width=0.5) + facet_wrap(~revClass, scale="free") + scale_x_discrete(labels=abbreviate) + theme(axis.text.x=element_text(angle=90, vjust=0.5, size=12))
